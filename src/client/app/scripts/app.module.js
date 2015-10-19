@@ -1,12 +1,17 @@
 (function () {
     'use strict';
 
+    angular.module('app.Web', [
+        'app.dashboard',
+        'app.user'
+
+    ]);
+
     angular.module('app', [
         'app.core',
         'app.widgets',
-        'app.admin',
-        'app.dashboard',
-        'app.layout'
+        'app.layout',
+        'app.Web'
     ]);
 
 })();

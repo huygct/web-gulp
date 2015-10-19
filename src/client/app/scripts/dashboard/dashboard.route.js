@@ -23,7 +23,21 @@
                     title: 'dashboard',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-dashboard"></i> Dashboard'
+                        icon: 'fa fa-dashboard',
+                        name: 'Dashboard'
+                        //children: [
+                        //    {
+                        //        url: '/admin2',
+                        //        icon: 'fa fa-dashboard',
+                        //        name: 'Dashboard 2'
+                        //    },
+                        //    {
+                        //        url: '/admin3',
+                        //        icon: 'fa fa-dashboard',
+                        //        name: 'Dashboard 3'
+                        //    }
+                        //]
+                        //content: '<i class="fa fa-dashboard"></i> Dashboard'
                     }
                 }
             }
