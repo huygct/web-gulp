@@ -93,6 +93,7 @@
                         handlingStateChangeError = false;
                         var title = config.docTitle + ' ' + (toState.title || '');
                         $rootScope.title = title; // data bind to <title>
+                        $rootScope.titlePage = (toState.title || ''); // data bind to <title>
                     }
                 );
             }
