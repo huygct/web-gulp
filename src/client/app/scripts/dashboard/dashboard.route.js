@@ -14,7 +14,7 @@
     function getStates() {
         return [
             {
-                state: 'dashboard',
+                state: 'app.dashboard',
                 config: {
                     url: '/',
                     templateUrl: 'app/scripts/dashboard/dashboard.html',

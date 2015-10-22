@@ -29,7 +29,7 @@ module.exports = function() {
         css: [
             client + 'plugins/' + '**/*.css',
             '!' + client + 'plugins/' + '**/*.min.css',
-            temp + 'styles.css',
+            //temp + 'styles.css',
             client + 'styles/' + '**/*.css',
             '!' +  client + 'styles/' + '**/*.min.css',
             clientApp + '**/*.css'

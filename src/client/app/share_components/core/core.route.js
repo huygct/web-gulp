@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -14,7 +14,19 @@
     function getStates() {
         return [
             {
-                state: '404',
+                state: 'app',
+                config: {
+                    abstract: true,
+                    templateUrl: 'app/share_components/core/main.html',
+                    resolve: {
+                        env: env
+                    },
+                    controller: 'CoreController',
+                    controllerAs: 'vm'
+                }
+            },
+            {
+                state: 'app.404',
                 config: {
                     url: '/404',
                     templateUrl: 'app/core/404.html',
@@ -23,4 +35,10 @@
             }
         ];
     }
+
+    env.$inject = ['coreService'];
+    function env (coreService) {
+        return coreService.getEnv();
+    }
+
 })();

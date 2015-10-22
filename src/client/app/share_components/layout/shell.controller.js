@@ -5,13 +5,17 @@
         .module('app.layout')
         .controller('ShellController', ShellController);
 
-    ShellController.$inject = ['$rootScope', '$timeout', 'config', 'logger'];
+    ShellController.$inject = ['$rootScope', '$timeout', 'config', 'logger', 'layoutService'];
     /* @ngInject */
-    function ShellController($rootScope, $timeout, config, logger) {
+    function ShellController($rootScope, $timeout, config, logger, layoutService) {
         var vm = this;
         vm.busyMessage = 'Please wait ...';
         vm.isBusy = true;
         $rootScope.showSplash = true;
+
+        vm.breadcrumb = layoutService.breadcrumb;
+        vm.page = layoutService.page;
+
         vm.navline = {
             title: config.appTitle,
             text: 'Created by John Papa',

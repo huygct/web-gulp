@@ -13,13 +13,19 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    {{$root.titlePage}}
-                    <small>it all starts here</small>
+                    {{vm.page.titlePage}}
                 </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li><a href="#">Examples</a></li>
-                    <li class="active">Blank page</li>
+                <ol class="breadcrumb" ng-if="vm.breadcrumb.length !== 0">
+                    <li ng-repeat="menu in vm.breadcrumb" ng-class="{'active':$last}">
+                        <a href="{{menu.url}}" ng-if="!$last">
+                            <i class="fa fa-dashboard" ng-if="menu.name === 'Home'"></i>
+                            {{menu.name}}
+                        </a>
+                        <i ng-if="$last">{{menu.name}}</i>
+                    </li>
+
+                    <!--<li><a href="#">Examples</a></li>-->
+                    <!--<li class="active">Blank page</li>-->
                 </ol>
             </section>
 

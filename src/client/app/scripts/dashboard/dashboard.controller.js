@@ -5,9 +5,9 @@
         .module('app.dashboard')
         .controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = ['$q', 'dataservice', 'logger'];
+    DashboardController.$inject = ['$q', 'dataservice', 'logger', 'layoutService'];
     /* @ngInject */
-    function DashboardController($q, dataservice, logger) {
+    function DashboardController($q, dataservice, logger, layoutService) {
         var vm = this;
         vm.news = {
             title: 'hottowel',
@@ -17,11 +17,15 @@
         vm.people = [];
         vm.title = 'Dashboard';
 
+        var breadcrumb = [];
+        layoutService.setBreadcrumb(breadcrumb);
+        layoutService.page.titlePage = 'Dashboard';
+
         activate();
 
         function activate() {
             var promises = [getMessageCount(), getPeople()];
-            return $q.all(promises).then(function() {
+            return $q.all(promises).then(function () {
                 logger.info('Activated Dashboard View');
             });
         }
@@ -39,5 +43,13 @@
                 return vm.people;
             });
         }
+
+        vm.smallBox = {
+            value: 30,
+            href: '#',
+            name: 'New Order',
+            logo: 'ion-bag',
+            color: 'bg-red'
+        };
     }
 })();

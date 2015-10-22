@@ -19,13 +19,14 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+    <link rel="stylesheet" href="/bower_components/ionicons/css/ionicons.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/app.css -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="/src/client/plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="/src/client/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
+    <link rel="stylesheet" href="/src/client/plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="/src/client/plugins/colorpicker/bootstrap-colorpicker.css">
     <link rel="stylesheet" href="/src/client/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="/src/client/plugins/daterangepicker/daterangepicker-bs3.css">
@@ -84,7 +85,6 @@
     <link rel="stylesheet" href="/src/client/plugins/iCheck/square/red.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/square/square.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/square/yellow.css">
-    <!--<link rel="stylesheet" href="/.tmp/styles.css">-->
     <link rel="stylesheet" href="/src/client/styles/AdminLTE.css">
     <link rel="stylesheet" href="/src/client/styles/css/AdminLTE.css">
     <link rel="stylesheet" href="/src/client/styles/css/skins/_all-skins.css">
@@ -112,19 +112,8 @@
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <div>
-        <div ng-include="'app/share_components/layout/shell.html'"></div>
-        <div id="splash-page" ng-show="showSplash">
-            <div class="page-splash">
-                <div class="page-splash-message">
-                    hottowel
-                </div>
-                <div class="progress progress-striped active page-progress-bar">
-                    <div class="bar"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <div ui-view ></div>
 
     <!-- build:js js/lib.js -->
     <!-- bower:js -->
@@ -150,6 +139,7 @@
     <script src="/src/client/app/share_components/blocks/logger/logger.module.js"></script>
     <script src="/src/client/app/share_components/blocks/router/router.module.js"></script>
     <script src="/src/client/app/share_components/core/core.module.js"></script>
+    <script src="/src/client/app/share_components/directive.module.js"></script>
     <script src="/src/client/app/share_components/layout/layout.module.js"></script>
     <script src="/src/client/app/share_components/widgets/widgets.module.js"></script>
     <script src="/src/client/plugins/bootstrap-slider/bootstrap-slider.js"></script>
@@ -235,13 +225,17 @@
     <script src="/src/client/app/share_components/blocks/router/router-helper.provider.js"></script>
     <script src="/src/client/app/share_components/core/config.js"></script>
     <script src="/src/client/app/share_components/core/constants.js"></script>
+    <script src="/src/client/app/share_components/core/core.controller.js"></script>
     <script src="/src/client/app/share_components/core/core.route.js"></script>
+    <script src="/src/client/app/share_components/core/core.service.js"></script>
     <script src="/src/client/app/share_components/core/dataservice.js"></script>
     <script src="/src/client/app/share_components/layout/ht-sidebar.directive.js"></script>
     <script src="/src/client/app/share_components/layout/ht-top-nav.directive.js"></script>
     <script src="/src/client/app/share_components/layout/layout.service.js"></script>
     <script src="/src/client/app/share_components/layout/shell.controller.js"></script>
     <script src="/src/client/app/share_components/layout/sidebar.controller.js"></script>
+    <script src="/src/client/app/share_components/smallBox/smallBox.directive.js"></script>
+    <script src="/src/client/app/share_components/smallBox/smallBox.service.js"></script>
     <script src="/src/client/app/share_components/widgets/ht-img-person.directive.js"></script>
     <script src="/src/client/app/share_components/widgets/ht-widget-header.directive.js"></script>
     <script src="/src/client/plugins/slimScroll/jquery.slimscroll.js"></script>

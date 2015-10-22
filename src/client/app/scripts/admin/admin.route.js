@@ -14,7 +14,7 @@
     function getStates() {
         return [
             {
-                state: 'admin',
+                state: 'app.admin',
                 config: {
                     url: '/admin',
                     templateUrl: 'app/scripts/admin/admin.html',

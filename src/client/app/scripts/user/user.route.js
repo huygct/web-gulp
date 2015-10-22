@@ -14,7 +14,7 @@
     function getStates() {
         return [
             {
-                state: 'user',
+                state: 'app.user',
                 config: {
                     url: '/user',
                     templateUrl: 'app/scripts/user/user.html',
