@@ -25,19 +25,19 @@
             nav: 3,
             icon: 'fa fa-cubes',
             name: 'Management',
+            onlyOne: true,
             children: [
               {
-                url: '/product',
+                url: 'app.product',
                 icon: 'fa fa-dashboard',
                 name: 'Product'
               },
               {
-                url: '/category',
+                url: 'app.category',
                 icon: 'fa fa-dashboard',
                 name: 'Category'
               }
             ]
-            //content: '<i class="fa fa-dashboard"></i> Dashboard'
           }
         }
       }

@@ -3,7 +3,10 @@
 
     angular.module('app.Web', [
         'app.dashboard',
-        'app.user'
+        'app.user',
+        'app.management',
+        'app.product',
+        'app.category'
 
     ]);
 
