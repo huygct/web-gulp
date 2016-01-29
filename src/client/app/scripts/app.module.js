@@ -11,6 +11,9 @@
     ]);
 
     angular.module('app', [
+        'ngMaterial',
+        'md.data.table',
+
         'app.core',
         'app.widgets',
         'app.layout',

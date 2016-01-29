@@ -26,8 +26,9 @@
         "moment": "^2.10.3",
         "angular-ui-router": "^0.2.15",
         "toastr": "^2.1.1",
+        "angular-material": "^1.0.4",
         "angular-animate": "^1.4.5",
-		"angular-smart-table": "^2.1.6",
+		    "angular-material-data-table": "^0.9.9",
         "ionicons": "^2.0.1"
     },
     "resolutions": {
