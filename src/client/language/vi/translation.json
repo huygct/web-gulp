@@ -1,0 +1,117 @@
+{
+  "commonApp": {
+    "home": "Home",
+    "nameWebApp": "Âm Nhạc",
+    "footerWebApp": "Thực hiện năm 2015, TMA Solutions",
+
+    "button": {
+      "addButton": "Thêm",
+      "deleteButton": "Xóa",
+      "searchButton": "Tìm Kiếm",
+      "editButton": "Sửa",
+      "createButton": "Tạo Mới",
+      "applyButton": "Đồng Ý",
+      "cancelButton": "Bỏ Qua",
+      "backButton": "Quay lại",
+      "yesButton": "Có",
+      "noButton": "Không"
+    },
+    "menu": {
+      "home": "Trang chủ",
+      "songs": "Bài hát",
+      "playlsits": "DS Bài hát"
+    },
+    "table": {
+      "footerTableBefore": "Có ",
+      "footerTableAfter": "dòng"
+    }
+  },
+  "contentWeb": {
+    "songs": {
+      "managerPage": {
+        "title": "Quản Lý Bài Hát"
+      },
+      "createSongs": {
+        "title": "Thêm Bài Hát",
+        "songName": "Tên bài hát",
+        "requiredSongName": "Tên bài hát không thể để trống.",
+        "artistName": "Tên tác giả"
+      },
+      "editSongs": {
+        "title": "Sửa Bài Hát",
+        "songName": "Tên bài hát",
+        "requiredSongName": "Tên bài hát không thể để trống.",
+        "artistName": "Tên tác giả"
+      },
+      "songTable": {
+        "name": "Tên",
+        "artist": "Tác giả",
+        "action": "Chức năng"
+      },
+      "sort": {
+        "sortByName": "Sắp Xếp Theo Tên",
+        "sortByArtist": "Sắp Xếp Theo Tác Giả"
+      },
+      "searchSongs": {
+        "text": "Tìm..."
+      },
+      "deleteDialog": {
+        "multiple": {
+          "title": "Xóa nhiều bài hát",
+          "context": "Bạn có muốn xóa những bài hát đó không?"
+        },
+        "single": {
+          "title": "Xóa bài hát",
+          "context": "Bạn có muốn xóa bài hát này không?"
+        }
+      }
+    },
+    "playlists": {
+      "button": {
+        "addRemoveButton": "Thêm/Xóa Bài hát"
+      },
+      "chooseSongsForPlaylist": {
+        "songs": "bài hát",
+        "chooseSongs": "Chọn bài hát",
+        "addAllSongs": "Thêm tất cả bài hát"
+      },
+      "managerPage": {
+        "title": "Quản lý DS Bài hát"
+      },
+      "createPlaylist": {
+        "title": "Tạo DS bài hát mới",
+        "playlistName": "Tên DS Bài hát",
+        "requiredPlaylistName": "Tên DS bài hát không thể để trống.",
+        "description": "Miêu tả"
+      },
+      "editPlaylist": {
+        "title": "Chỉnh sửa DS Bài hát",
+        "playlistName": "Tên DS Bài hát",
+        "requiredPlaylistName": "Tên DS bài hát không thể để trống.",
+        "description": "Miêu tả"
+      },
+      "playlistTable": {
+        "name": "Tên",
+        "description": "Miêu tả",
+        "action": "Chức năng"
+      },
+      "sort": {
+        "sortByName": "Sắp Xếp Theo Tên",
+        "sortByDescription": "Sắp Xếp Theo Miêu tả"
+      },
+      "searchPlaylist": {
+        "text": "DS Bài hát..."
+      },
+      "deleteDialog": {
+        "multiple": {
+          "title": "Xóa nhiều DS bài hát",
+          "context": "Bạn có muốn xóa những DS bài hát đó không?"
+        },
+        "single": {
+          "title": "Xóa DS bài hát",
+          "context": "Bạn có muốn xóa DS bài hát này không?"
+        }
+      }
+    }
+  }
+}

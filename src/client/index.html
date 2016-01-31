@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="/bower_components/angular-material-data-table/dist/md-data-table.min.css" />
-    <link rel="stylesheet" href="/bower_components/ionicons/css/ionicons.css" />
+    <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/app.css -->
     <!-- inject:css -->
+    <link rel="stylesheet" href="/src/client/plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="/src/client/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
     <link rel="stylesheet" href="/src/client/plugins/colorpicker/bootstrap-colorpicker.css">
     <link rel="stylesheet" href="/src/client/plugins/datepicker/datepicker3.css">
@@ -40,7 +41,6 @@
     <link rel="stylesheet" href="/src/client/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="/src/client/plugins/morris/morris.css">
     <link rel="stylesheet" href="/src/client/plugins/timepicker/bootstrap-timepicker.css">
-    <link rel="stylesheet" href="/src/client/plugins/bootstrap-slider/slider.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/flat/_all.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/flat/aero.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/flat/blue.css">
@@ -53,6 +53,17 @@
     <link rel="stylesheet" href="/src/client/plugins/iCheck/flat/red.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/flat/yellow.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/futurico/futurico.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/_all.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/aero.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/blue.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/green.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/grey.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/line.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/orange.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/pink.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/purple.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/red.css">
+    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/yellow.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/minimal/_all.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/minimal/aero.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/minimal/blue.css">
@@ -76,19 +87,6 @@
     <link rel="stylesheet" href="/src/client/plugins/iCheck/square/red.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/square/square.css">
     <link rel="stylesheet" href="/src/client/plugins/iCheck/square/yellow.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/_all.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/aero.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/blue.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/green.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/grey.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/line.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/orange.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/pink.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/purple.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/red.css">
-    <link rel="stylesheet" href="/src/client/plugins/iCheck/line/yellow.css">
-    <link rel="stylesheet" href="/src/client/styles/AdminLTE.css">
-    <link rel="stylesheet" href="/src/client/styles/css/AdminLTE.css">
     <link rel="stylesheet" href="/src/client/styles/css/skins/_all-skins.css">
     <link rel="stylesheet" href="/src/client/styles/css/skins/skin-black-light.css">
     <link rel="stylesheet" href="/src/client/styles/css/skins/skin-black.css">
@@ -102,6 +100,8 @@
     <link rel="stylesheet" href="/src/client/styles/css/skins/skin-red.css">
     <link rel="stylesheet" href="/src/client/styles/css/skins/skin-yellow-light.css">
     <link rel="stylesheet" href="/src/client/styles/css/skins/skin-yellow.css">
+    <link rel="stylesheet" href="/src/client/styles/AdminLTE.css">
+    <link rel="stylesheet" href="/src/client/styles/css/AdminLTE.css">
     <link rel="stylesheet" href="/src/client/app/scripts/product/product.css">
     <!-- endinject -->
     <!-- endbuild -->
@@ -132,6 +132,11 @@
     <script src="/bower_components/angular-messages/angular-messages.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
     <script src="/bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+    <script src="/bower_components/i18next/bin/index.js"></script>
+    <script src="/bower_components/ng-i18next/dist/ng-i18next.js"></script>
+    <script src="/bower_components/Chart.js/Chart.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="/bower_components/ng-csv/build/ng-csv.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -225,6 +230,7 @@
     <script src="/src/client/app/scripts/admin/admin.route.js"></script>
     <script src="/src/client/app/scripts/adminDashboard/adminDashboard.controller.js"></script>
     <script src="/src/client/app/scripts/adminDashboard/adminDashboard.route.js"></script>
+    <script src="/src/client/app/scripts/appConstant.js"></script>
     <script src="/src/client/app/scripts/category/category.controller.js"></script>
     <script src="/src/client/app/scripts/category/category.route.js"></script>
     <script src="/src/client/app/scripts/dashboard/dashboard.controller.js"></script>
@@ -233,6 +239,7 @@
     <script src="/src/client/app/scripts/management/management.route.js"></script>
     <script src="/src/client/app/scripts/product/product.controller.js"></script>
     <script src="/src/client/app/scripts/product/product.route.js"></script>
+
     <script src="/src/client/app/scripts/user/user.controller.js"></script>
     <script src="/src/client/app/scripts/user/user.route.js"></script>
     <script src="/src/client/app/share_components/blocks/exception/exception-handler.provider.js"></script>
@@ -244,6 +251,7 @@
     <script src="/src/client/app/share_components/core/core.controller.js"></script>
     <script src="/src/client/app/share_components/core/core.route.js"></script>
     <script src="/src/client/app/share_components/core/core.service.js"></script>
+    <script src="/src/client/app/scripts/product/product.service.js"></script>
     <script src="/src/client/app/share_components/core/dataservice.js"></script>
     <script src="/src/client/app/share_components/layout/ht-sidebar.directive.js"></script>
     <script src="/src/client/app/share_components/layout/ht-top-nav.directive.js"></script>

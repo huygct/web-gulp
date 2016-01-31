@@ -33,7 +33,7 @@
 
         function getApi(api){
             var config = service.env.server;
-            return config.protocol + config.address + ':' + config.port + api;
+            return config.protocol + config.address + ':' + config.port + '/' + api;
         }
     }
 })();

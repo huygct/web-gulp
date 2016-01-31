@@ -5,11 +5,25 @@
     .module('app.category')
     .controller('CategoryController', CategoryController);
 
-  CategoryController.$inject = ['logger', 'layoutService'];
+  CategoryController.$inject = ['$scope', 'logger', 'layoutService'];
   /* @ngInject */
-  function CategoryController(logger, layoutService) {
+  function CategoryController($scope, logger, layoutService) {
     var vm = this;
     vm.title = 'Category';
+
+    /**
+     *
+     */
+    $scope.clearValue = function() {
+      $scope.myModel = undefined;
+    };
+    $scope.save = function() {
+      alert('Form was valid!');
+    };
+
+    /**
+     *
+     */
 
     activate();
 
