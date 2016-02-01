@@ -1,12 +1,25 @@
 <div>
-  <md-toolbar class="md-whiteframe-1dp">
-    <div class="md-toolbar-tools">
-      <div class="md-title">Material Design Data Table</div>
-    </div>
-    <div>
-
-    </div>
-  </md-toolbar>
+  <!--<md-toolbar class="md-whiteframe-1dp">-->
+    <!--<div class="md-toolbar-tools">-->
+      <!--<div class="md-title">-->
+        <!--Material Design Data Table-->
+      <!--</div>-->
+      <!--<div class="flex-right">-->
+        <!--<md-button class="md-accent" aria-label="Add">-->
+          <!--<i class="fa fa-plus"></i>-->
+          <!--<span>Add</span>-->
+        <!--</md-button>-->
+        <!--<md-button class="md-accent" aria-label="Edit">-->
+          <!--<i class="fa fa-plus"></i>-->
+          <!--<span>Edit</span>-->
+        <!--</md-button>-->
+        <!--<md-button class="md-icon-button md-accent" aria-label="Delete">-->
+          <!--<i class="fa fa-plus"></i>-->
+          <!--<span>Delete</span>-->
+        <!--</md-button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</md-toolbar>-->
 
   <md-content laout="column" flex>
 
@@ -21,6 +34,20 @@
     <!--</md-card>-->
 
     <md-card>
+      <div class="flex-right">
+        <md-button class="md-accent" aria-label="Add">
+          <i class="fa fa-plus"></i>
+          <span>Add</span>
+        </md-button>
+        <md-button class="md-accent" aria-label="Edit">
+          <i class="fa fa-plus"></i>
+          <span>Edit</span>
+        </md-button>
+        <md-button class="md-icon-button md-accent" aria-label="Delete">
+          <i class="fa fa-plus"></i>
+          <span>Delete</span>
+        </md-button>
+      </div>
 
       <md-toolbar class="md-table-toolbar md-default" ng-hide="vm.options.rowSelection && vm.selected.length">
         <div class="md-toolbar-tools">
