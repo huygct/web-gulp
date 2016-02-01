@@ -11,6 +11,7 @@
   ]);
 
   angular.module('app', [
+    'ui.bootstrap',
     'ngSanitize',
     'ngMaterial',
     'ngMessages',
