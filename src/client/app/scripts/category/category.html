@@ -1,16 +1,22 @@
 <div ng-cloak="" class="category-app">
-  <md-input-container class="md-block box-input-container">
-    <label>Description</label>
-    <input md-maxlength="30" required name="description" ng-model="project.description">
-    <div ng-messages="projectForm.description.$error">
-      <div ng-message="required">This is required.</div>
-      <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-    </div>
-    <md-button class="md-icon-button md-accent button-add-category" aria-label="Delete">
-      <i class="fa fa-plus"></i>
-      <span>Add</span>
-    </md-button>
-  </md-input-container>
+  <button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Add Category</button>
+  <hr>
+  <div uib-collapse="isCollapsed">
+    <md-content class="well well-lg">
+      <md-input-container class="md-block box-input-container">
+        <label>Description</label>
+        <input md-maxlength="30" required name="description" ng-model="project.description">
+        <div ng-messages="projectForm.description.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+        </div>
+        <md-button class="md-icon-button md-accent button-add-category" aria-label="Delete">
+          <i class="fa fa-plus"></i>
+          <span>Add</span>
+        </md-button>
+      </md-input-container>
+    </md-content>
+  </div>
 
   <md-content>
     <md-list>
@@ -24,6 +30,12 @@
             Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum
             velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
           </p>
+          <button type="button" class="btn btn-primary btn-xs" ng-click="showConfirm($event)">
+            Edit
+          </button>
+          <button type="button" class="btn btn-primary btn-xs">
+            Delete
+          </button>
         </div>
       </md-list-item>
       <md-list-item class="md-3-line md-long-text">

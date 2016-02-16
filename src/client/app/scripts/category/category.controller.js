@@ -5,9 +5,9 @@
     .module('app.category')
     .controller('CategoryController', CategoryController);
 
-  CategoryController.$inject = ['$scope', 'logger', 'layoutService'];
+  CategoryController.$inject = ['$scope', 'logger', 'layoutService', '$mdDialog'];
   /* @ngInject */
-  function CategoryController($scope, logger, layoutService) {
+  function CategoryController($scope, logger, layoutService, $mdDialog) {
     var vm = this;
     vm.title = 'Category';
 
@@ -58,6 +58,22 @@
         notes: " I'll be in your neighborhood doing errands"
       }
     ];
+
+    $scope.showConfirm = function($event) {
+      // Appending dialog to document.body to cover sidenav in docs app
+      var confirm = $mdDialog.confirm()
+        .title('Would you like to delete your debt?')
+        .textContent('All of the banks have agreed to forgive you your debts.')
+        .ariaLabel('Lucky day')
+        .targetEvent($event)
+        .ok('Please do it!')
+        .cancel('Sounds like a scam');
+      $mdDialog.show(confirm).then(function() {
+        $scope.status = 'You decided to get rid of your debt.';
+      }, function() {
+        $scope.status = 'You decided to keep your debt.';
+      });
+    };
 
     /**
      *
