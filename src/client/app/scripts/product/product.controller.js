@@ -13,6 +13,8 @@
     var vm = this;
     vm.title = 'Product';
 
+    vm.cache = productService.cache;
+
     /**
      * ------------------------------------------------------------------
      */
@@ -117,6 +119,19 @@
       console.log('limit: ', limit);
     };
 
+    vm.goToAddView = function () {
+      vm.cache.currentView = productService.getView.add;
+      vm.currentProduct = {};
+    };
+
+    vm.goToEditView = function () {
+      vm.cache.currentView = productService.getView.edit;
+      //vm.currentProduct = ;
+    };
+
+    vm.actionDelete = function () {
+
+    };
 
     /**
      * -------------------------------------------------------------------

@@ -11,6 +11,11 @@
           addProduct: 'product/add',
           updateProduct: 'product/update',
           deleteProduct: 'product/delete'
+        },
+        urlTemplates: {
+          main: 'app/scripts/product/table/tableProduct.html',
+          add: 'app/scripts/product/action/actionProduct.html',
+          edit: 'app/scripts/product/action/actionProduct.html'
         }
       }
 
